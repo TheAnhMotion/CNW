@@ -1,0 +1,124 @@
+/* --- CẤU HÌNH CHUNG (Dùng cho cả 2 trang) --- */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #eee;
+}
+
+h1 {
+    margin: center;
+    color: #333;
+}
+
+/* Nút bấm chuyển trang (Link) */
+.btn-link {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+/* Màu nút bấm chuyển trang */
+.to-admin { background: #333; color: white; }
+.to-home { background: #007bff; color: white; }
+.to-admin:hover, .to-home:hover { opacity: 0.8; }
+
+
+/* --- GIAO DIỆN KHÁCH (Grid Layout) --- */
+.flower-item {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.flower-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.info {
+    padding: 20px;
+}
+
+.info h3 {
+    margin: 0 0 10px;
+    color: #d63384;
+}
+
+.info p {
+    color: #666;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+/* --- GIAO DIỆN ADMIN (Table Layout) --- */
+/* Nút thêm mới */
+.btn-add {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+th, td {
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #343a40;
+    color: white;
+}
+
+/* Ảnh nhỏ trong bảng admin */
+.thumb {
+    width: 80px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+/* Các nút hành động (Sửa/Xóa) */
+.btn-edit, .btn-del {
+    padding: 6px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+    margin-right: 5px;
+}
+
+.btn-edit { background-color: #ffc107; color: #333; }
+.btn-del { background-color: #dc3545; }
+
+.btn-edit:hover, .btn-del:hover { opacity: 0.8; }
